@@ -13,7 +13,7 @@ const handleLogin = (e) => {
         return false;
     }
 
-    helper.sendPost(e.target.action, { username, pass, _csrf });
+    helper.sendPost(e.target.action, {username, pass, _csrf});
 
     return false;
 };
@@ -37,13 +37,13 @@ const handleSignup = (e) => {
         return false;
     }
 
-    helper.sendPost(e.target.action, { username, pass, pass2, _csrf });
+    helper.sendPost(e.target.action, {username, pass, pass2, _csrf});
 
     return false;
 };
 
 const LoginWindow = (props) => {
-    return (
+    return ( 
         <form id="loginForm"
             name="loginForm"
             onSubmit={handleLogin}
@@ -62,7 +62,7 @@ const LoginWindow = (props) => {
 };
 
 const SignUpWindow = (props) => {
-    return (
+    return ( 
         <form id="signupForm"
             name="signupForm"
             onSubmit={handleSignup}

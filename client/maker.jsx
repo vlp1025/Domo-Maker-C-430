@@ -9,17 +9,17 @@ const handleDomo = (e) => {
     const _csrf = e.target.querySelector('#_csrf').value;
 
     if (!name || !age) {
-        helper.handleError('All fields are required');
+        helper.handleError('All fields are required!');
         return false;
     }
 
-    helper.sendPost(e.target.action, { name, age, _csrf }, loadDomosFromServer);
+    helper.sendPost(e.target.action, {name, age, _csrf}, loadDomosFromServer);
 
     return false;
 };
 
 const DomoForm = (props) => {
-    return (
+    return ( 
         <form id="domoForm"
             onSubmit={handleDomo}
             name="domoForm"
@@ -90,3 +90,4 @@ const init = async () => {
 };
 
 window.onload = init;
+
